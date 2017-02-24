@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkbox</title>
+	<style>
+		input{
+			width: 20px;
+			height: 20px;
+			margin: 20px;
+		}
+		.ch{
+			display: inline-block;
+			width: 0;
+			position: relative;
+		}
+		.ch:checked::before{
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			content: "\2714";
+			display: inline-block;
+			font-size: 16px;
+			line-height: 16px;
+			text-align: center;
+			color: red;
+			width: 16px;
+			height: 16px;
+			border: 1px solid red;
+		}
+		.ch::after{
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			background: #fff;
+			content: "";
+			display: inline-block;
+			line-height: 16px;
+			width: 16px;
+			height: 16px;
+			border: 1px solid red;
+		}
+		.ra{
+			display: inline-block;
+			width: 0;
+			position: relative;
+		}
+		.ra:checked::before{
+			position: absolute;
+			top: 0;
+			border-radius: 100%;
+			z-index: 10;
+			content: "●";
+			display: inline-block;
+			font-size: 16px;
+			line-height: 14px;
+			text-align: center;
+			color: red;
+			width: 16px;
+			height: 16px;
+			border: 1px solid red;
+		}
+		.ra::after{
+			position: absolute;
+			top: 0;
+			border-radius: 100%;
+			z-index: 1;
+			background: #fff;
+			content: "";
+			display: inline-block;
+			line-height: 16px;
+			width: 16px;
+			height: 16px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+<p>
+	此代码在chrome中有效，其他浏览器无效，若想在实现兼容性，可以把::before::after换成两个label标签即可~
+</p>
+	<input type="checkbox" class="ch" checked>
+	<input type="checkbox" class="ch" id="aa"><br>
+	<input type="radio" class="ra" name="qq" checked>
+	<input type="radio" class="ra" name="qq">
+</body>
+</html>
