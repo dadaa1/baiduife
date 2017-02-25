@@ -12,10 +12,10 @@
 			background: red;
 		}
 		#menu{
+			box-sizing: border-box;
 			margin: 0;
 			padding: 0;
 			background: #fff;
-			/* //display: inline-block; */
 			width: 200px;
 			border:#808080 solid 1px;
 			border-radius:10px;
@@ -23,6 +23,7 @@
 			 display: none; 
 		}
 		#menu>li{
+			box-sizing: border-box;
 			margin: 0;
 			padding:0;
 			list-style: none;
@@ -45,12 +46,21 @@
 </ul>
 	<script>
 	document.body.addEventListener("contextmenu", function(e){
-			e.preventDefault();
+		/*alert(screen.availWidth);*/
+		e.preventDefault();
 		var menu=document.getElementById('menu');
 		menu.style.display="block";
-		menu.style.top=e.clientY+"px";
-		menu.style.left=e.clientX+"px";
-		});
+		if(screen.availWidth-e.clientX<200){
+			menu.style.left=e.clientX-200+"px";
+		}else{
+			menu.style.left=e.clientX+"px";
+		}
+		if(screen.availHeight-e.clientY<150){
+			menu.style.top=e.clientY-150+"px";
+		}else{
+			menu.style.top=e.clientY+"px";
+		}
+	});
 	document.body.addEventListener("click", function(e){
 		var menu=document.getElementById('menu');
 		if(e.target.tagName=='LI'){
