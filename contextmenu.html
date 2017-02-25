@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oncontextmenu</title>
+	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			background: red;
+		}
+		#menu{
+			margin: 0;
+			padding: 0;
+			background: #fff;
+			/* //display: inline-block; */
+			width: 200px;
+			border-radius:10px;
+			position: fixed;
+			 display: none; 
+		}
+		#menu>li{
+			margin: 0;
+			padding:0;
+			list-style: none;
+			height: 50px;
+			border-bottom: 1px solid;
+			text-align: center;
+			line-height: 50px;
+			font-size: 40px;
+		}
+		#menu>li:last-child{
+			border-bottom: none;
+		}
+	</style>
+</head>
+<body>
+<ul id="menu">
+	<li id='menu1'>menu1</li>
+	<li id='menu2'>menu2</li>
+	<li id='menu3'>menu3</li>
+</ul>
+	<script>
+	document.body.addEventListener("contextmenu", function(e){
+			e.preventDefault();
+		var menu=document.getElementById('menu');
+		menu.style.display="block";
+		menu.style.top=e.clientY+"px";
+		menu.style.left=e.clientX+"px";
+		});
+	document.body.addEventListener("click", function(e){
+		var menu=document.getElementById('menu');
+		if(e.target.tagName=='LI'){
+			//alert('点击了menu')
+			if(e.target.id=='menu1'){
+				alert('1111')
+			}
+			if(e.target.id=='menu2'){
+				alert('2222')
+			}
+			if(e.target.id=='menu3'){
+				alert('3333')
+			}
+		}else{
+			menu.style.display="none";
+		}
+		
+	});
+	</script>
+</body>
+</html>
