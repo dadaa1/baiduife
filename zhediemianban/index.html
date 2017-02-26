@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>折叠面板</title>
+	<style>
+		input{
+			 display: none; 
+		}
+		label{
+			display: block;
+			height: 40px;
+			width: 400px;
+			text-align: center;
+			line-height: 40px;
+			background: #ddd;
+			margin-top:8px;
+			border: solid 1px red; 
+			border-radius: 5px;
+		}
+		.nei{
+			box-sizing: border-box;
+			display: inline-block;
+			overflow: hidden;
+			width: 400px;
+			word-wrap:break-word;
+			height: 0;
+			background-color: #ddd;
+			border-top: none;
+			transition: all .5s;
+		}
+		input:checked+label{
+			border-radius: 5px 5px 0 0;
+		}
+		input:checked+label+span{
+			border: 1px solid red;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<input type="radio" name='q' id='a'>
+		<label for="a">111111111111</label>
+		<span class="nei">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</span>
+		<input type="radio" name='q' id='b'>
+		<label for="b">222222222222</label>
+		<span class="nei">2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222</span>
+		<input type="radio" name='q' id='c'>
+		<label for="c">333333333333</label>
+		<span class="nei">333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333</span>
+	</div>
+</body>
+</html>

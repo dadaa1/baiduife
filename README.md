@@ -5,3 +5,5 @@
 [右键菜单](https://dadaa1.github.io/baiduife/contextmenu.html)
 
 [听指令的小方块1](https://dadaa1.github.io/baiduife/fangkuai)
+
+[折叠面板](https://dadaa1.github.io/baiduife/zhediemianban)
