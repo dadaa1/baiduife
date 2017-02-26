@@ -113,5 +113,3 @@ window.onload=function(){
 		}
 	}
 }
-
-
