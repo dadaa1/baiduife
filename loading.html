@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3饼状loading效果</title>
+    <style>
+        .css3{
+            position: relative;
+            margin: 200px;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red; 
+            border-radius: 100%;
+            transition: all 1s;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            z-index: 1;
+        }
+        .css3::before{
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 100px;
+            border-radius: 50px 0 0 50px;
+            background-color: green;
+            transform:translatez(10);
+            transform-origin: right;
+            transition: all 1s;
+            animation-name: an1; 
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            z-index: 10;
+        }
+        .css3::after{
+            position: absolute;
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 100px;
+            border-radius:50px 0 0 50px;
+            background-color: red;
+            transform:translatez(11);
+            transform-origin: right;
+            transition: all 1s;
+            z-index: 10;
+            animation-name: an2; 
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes an1{
+            0%{
+                z-index: 10;
+                transform:translatez(10);
+            }
+            25%{
+                transform:translatez(10);
+                transform: rotate(180deg);
+            }
+            50%{
+                transform: rotate(360deg);
+                z-index: 100;
+                transform:translatez(100);
+            }
+            75%{
+                z-index: 10;
+                transform:translatez(10);
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(360deg);
+                transform:translatez(10);
+            }
+        }
+        @keyframes an2{
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(0deg);
+            }
+            75%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="css3"></div>
+</body>
+</html>
