@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表</title>
+	<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+#warp {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background: #fafafa;
+	text-align: center;
+	margin:100px auto 0;
+	border: 8px solid #808080;
+	border-radius: 150px;
+}
+.a1{
+	display:block;
+	width: 300px;
+	height:5px;
+	position: absolute;
+	top:147px;
+	left:0;
+}
+.left{
+	display:block;
+	float:left;
+	width: 20px;
+	height: 5px;
+	background-color: #808080;
+}
+.right{
+	display:block;
+	float:right;
+	width: 20px;
+	height: 5px;
+	background-color: #808080;
+}
+.po{
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	border-radius: 10px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin: -10px 0 0 -10px;
+	z-index:99;
+}
+#mz{
+	height:300px;
+	width: 5px;
+	position: absolute;
+	top:0px;
+	left:149px;
+	z-index:80;
+}
+.mz{
+	width: 5px;
+	height: 155px;
+	margin: 45px 0 100px 0;
+	background-color: #60f;
+}
+#fz{
+	width: 7px;
+	height: 300px;
+	position: absolute;
+	top:0;
+	left:148px;
+	z-index: 10;
+}
+.fz{
+	width: 7px;
+	height:135px;
+	margin: 55px 0 110px 0;
+	background-color: #00f;
+}
+#sz{
+	width: 10px;
+	height:300px;
+	position: absolute;
+	top:0;
+	left:145px;
+	z-index: 5;
+}
+.sz{
+	width: 10px;
+	height:110px;
+	margin: 70px 0 120px 1px;
+	background: #9f9;
+}
+.num{
+	font-size: 24px;
+	display: inline-block;
+}
+.shezhi{
+	display: block;
+	margin: 60px auto;
+	width: 700px;
+}	
+</style>
+
+</head>
+<body>
+	<div id="warp">
+	<div class="po"></div>  
+	<div id="mz">
+		<div class="mz"></div>
+	</div>
+	<div id="fz">
+		<div class="fz"></div>
+	</div>
+	<div id="sz">
+		<div class="sz"></div>
+	</div>
+	</div>	
+	<div class="shezhi">
+	<p id="time"></p>
+	<h3>时间设置(24小时制)</h3>
+		时：<input type="text" id='s1'>
+		分：<input type="text" id='s2'>
+		秒：<input type="text" id='s3'>
+		<input type="button" value="设置" id='s4'>
+	<h3>闹钟设置(24小时制)</h3>
+		时：<input type="text" id='n1'>
+		分：<input type="text" id='n2'>
+		秒：<input type="text" id='n3'> 
+		<input type="button" value="设置" id='n4'><br> 
+		闹钟：<p id='nao'></p>
+	</div>
+	<script src='moment.js'></script>
+</body>
+</html>
