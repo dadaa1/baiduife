@@ -13,3 +13,7 @@
 [实现常见的技术产品官网的页面架构及样式布局](https://dadaa1.github.io/baiduife/yangshibuju)
 
 [模拟时钟](https://dadaa1.github.io/baiduife/biao)
+
+[表单（一）单个表单项的检验](https://dadaa1.github.io/baiduife/biaodan/index1.html)
+
+[UI组件之浮出层](https://dadaa1.github.io/baiduife/uifuchuceng)

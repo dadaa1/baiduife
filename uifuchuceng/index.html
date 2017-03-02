@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ui浮出层</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body style="overflow: ;">
+<main>
+<button id="open">
+	打开弹出层
+</button>
+</br>
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+	我是内容</br>
+	我是内容</br>
+	我是内容</br>
+
+</main>
+<div class="bg-h">
+<div class="fuchu">
+		<h3>这是一个浮出层</h3>
+		<h2 class="close" id="close">X</h2>
+		<div class="content">
+			这是一个浮出层
+		</div>
+		<div class="footer">
+			<button>确定</button>
+			<button>取消</button>
+		</div>
+</div>	
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+	function $(a){
+		return document.querySelector(a)
+	}
+	function open(){
+		$('.bg-h').style.display="block";
+	 	$('body').style.overflow="hidden";
+	}
+	 function close(){
+	 	$('.bg-h').style.display="none";
+	 	$('body').style.overflow="";
+	  }
+
+	$('#close').onclick=function(){
+			close();
+	}
+	$('#open').onclick=function(){
+			open();
+	}
+	$(".footer").onclick=function(e){
+		var a=e.target.textContent;
+		if(a=="确定"){
+			alert("您点击了确定！");
+			close();
+		}else{
+			alert("您点击了取消！");
+			close();
+		}
+
+	}
+
+	$('.bg-h:not(".fuchu")').onclick=function(){
+		close();
+	}
+
+
+	}
+	
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
