@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单（二）单个表单项的检验</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		input{
+			outline: none;
+			width: 300px;
+			height:30px;
+			border-radius: 5px;
+			border:#808080 solid 1px;
+		}
+		p{
+			font-size: 8px;
+		}
+		input+p{
+			display: none;
+		}
+		input:focus+p{
+			display: block;
+		}
+		
+	</style>
+</head>
+<body>
+	名称
+	<input type="text">
+	<p>必填，长度为4到16个字符~</p>
+	<br>
+	名称
+	<input type="text">
+	<p>必填，长度为4到16个字符~</p>
+	<br>
+	名称
+	<input type="text">
+	<p>必填，长度为4到16个字符~</p>
+	<br>
+	<button>提交</button>
+	<script>
+	function yanzheng(obj){
+		console.log(obj);
+		obj.dom.onblur=function(){
+			console.log('ssssssss');
+			if(obj.f(obj.dom.value)==true){
+				obj.dom.nextElementSibling.innerText=obj.dui;
+				obj.dom.nextElementSibling.style='color:green;display:block;';
+			}else{
+				obj.dom.nextElementSibling.innerText=obj.cuo;
+				obj.dom.nextElementSibling.style='color:red;display:block;';
+			}
+		}
+	}
+	yanzheng({
+		dom:document.getElementsByTagName('input')[0],
+		f:function(a){
+			if(a.length>3){
+				return 1;
+			}else{
+				return 0;
+			}
+		},
+		dui:'验证通过~',
+		cuo:'验证不对~'
+	})
+	yanzheng({
+		dom:document.getElementsByTagName('input')[1],
+		f:function(a){
+			if(a.length>3){
+				return 1;
+			}else{
+				return 0;
+			}
+		},
+		dui:'验证通过~',
+		cuo:'验证不对~'
+	})
+	yanzheng({
+		dom:document.getElementsByTagName('input')[2],
+		f:function(a){
+			if(a.length>3){
+				return 1;
+			}else{
+				return 0;
+			}
+		},
+		dui:'验证通过~',
+		cuo:'验证不对~'
+	})
+document.getElementsByTagName('button')[0].onclick=function(){
+	var a=function(i){
+		return document.getElementsByTagName('p')[i]
+	}
+		if(a(0).style.color=='green'&&a(1).style.color=='green'&&a(2).style.color=='green'){
+			alert('通过了~');
+		}
+	}
+	</script>
+</body>
+</html>
