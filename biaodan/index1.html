@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单（一）单个表单项的检验</title>
+	<style>
+		input{
+			outline: none;
+			width: 300px;
+			height:30px;
+			border-radius: 5px;
+			border:#808080 solid 1px;
+		}
+		#yan{
+			width: auto;
+			height: auto;
+			background-color: blue;
+			padding: 8px;
+			color: #fff;
+			border:none;
+		}
+		p{
+			font-size: 8px;
+		}
+	</style>
+</head>
+<body>
+	名称
+	<input type="text" id='ss'>
+	<input type="button" value="验证" id='yan'>
+	<p>必填，长度为4到16个字符~</p>
+	<script>
+	document.getElementById('yan').onclick=function(){
+			var ss=document.getElementById('ss');
+			var str=ss.value;
+			str=str.replace(/[^x00-xff]/g,'AB');
+			var p=document.getElementsByTagName('p')[0];
+		if(str.length<=12&&str.length>3){
+				p.innerText='名称格式正确~';
+				p.style.color='green';
+				ss.style.border='1px solid green';
+			}else{
+			document.getElementsByTagName('p')[0].innerText='姓名不能为空~';
+			p.style.color='red';
+				ss.style.border='1px solid red';
+				ss.style.outline=''
+
+			}
+		}
+	</script>
+</body>
+</html>
