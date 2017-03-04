@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UI组件之排序表格</title>
+	<style>
+	table,tr,td,th{
+		border-collapse:collapse; 
+		border:1px solid #000;
+	}
+	th{
+		background-color: gray;
+		color: #fff;
+		position: relative;
+		width: 60px;
+	}
+	th>span:first-child{
+		font-size: 12px;
+		position: absolute;
+		right:8px;
+		top:4px;
+	}
+	th>span:last-child{
+		font-size: 12px;
+		position: absolute;
+		right:8px;
+		bottom:4px;
+	}
+	
+	th,td{
+		padding: 10px 20px;
+		text-align: center;
+	}
+    span{
+        cursor: pointer;
+    }
+	</style>
+</head>
+<body>
+	
+<script>
+    var obj1=[['姓名',0],['语文',1],['数学',1],['英语',0],['总分',1]]
+    var obj2=[
+    ['小马',11,11,13,15],
+    ['小明',12,13,10,12],
+    ['小东',13,12,16,45],
+    ['小留言',14,15,14,37]
+    ];
+</script>
+<script src='my.js'></script>
+</body>
+</html>
