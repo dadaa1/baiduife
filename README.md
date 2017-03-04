@@ -19,3 +19,6 @@
 [表单（二）多个表单项的检验](https://dadaa1.github.io/baiduife/biaodan/index2.html)
 
 [UI组件之浮出层](https://dadaa1.github.io/baiduife/uifuchuceng)
+
+[UI组件之排序表格](https://dadaa1.github.io/baiduife/biaogepaixu)
+
