@@ -84,7 +84,9 @@ function selectP2(school,index){
 	}
 	$('s1').onchange=function(e){
 		console.log(e.srcElement.value,this.options);
-		this.remove(this.options[0]);
+		if(this.options[0].value=='请选择'){
+			this.remove(this.options[0]);
+		}
 		$('s2').innerHTML=selectP2(school,e.srcElement.value);
 	}
 
