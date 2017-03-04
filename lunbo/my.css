@@ -9,7 +9,7 @@ ul{
 	perspective:800;
 	transform-style: preserve-3d;
 	-webkit-perspective:800;
-	perspective-origin: 50% 0%; 
+	perspective-origin: 50%; 
 }
 li{
 	position: absolute;
@@ -40,6 +40,10 @@ li:nth-of-type(4){
 }
 li:nth-of-type(5){
 	transform: rotateY(-90deg) translateZ(150px);
+}
+li:nth-of-type(6){
+	transform: translateZ(-150px);
+	background-color: red;
 }
 
 

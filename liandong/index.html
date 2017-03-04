@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单（三）联动</title>
+	<style>
+		input{
+			height: 20px;
+			width: 20px;
+		}
+		#main{
+			width: 300px;
+			margin: 50px auto;
+		}
+		#zai{
+			width: 400px;
+			margin: 10px auto;
+		}
+		select{
+			width: 100px;
+			border-radius: 5px;
+			outline:none;
+		}
+		#fei{
+			width: 400px;
+			margin: 30px auto;
+		}
+		#fei>input{
+			width:200px;
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+	<input type="radio" name='school' id='a'>
+	<label for="a">在校生</label>
+	<input type="radio" name='school' id='b'>
+	<label for="b">非在校生</label>
+</div>
+<div id="zai" style='display: block;'>
+	学校：
+	<select id="s1">
+
+	</select>
+	<select id="s2">
+		
+	</select>
+</div>
+	<div id="fei" style="display: none;">
+		就业单位：<input type="text">
+	</div>
+<script>
+var school={
+	'北京':['北京大学','清华大学','其他大学'],
+	'山东':['山东大学','山东科技大学','山东理工大学'],
+	'武汉':['武汉大学']
+}
+function $(a){
+	return document.getElementById(a);
+}
+function selectP1(school){
+	var html='<option>请选择</option>';
+	for(index in school){
+		html+='<option>'+index+'</option>';
+	}
+	return html;
+}
+function selectP2(school,index){
+	var html='';
+	school[index].forEach(function(e){
+		html+='<option>'+e+'</option>';
+	})
+	return html;
+}
+	$('a').onclick=function(){
+		$('zai').style.display='block';
+		$('fei').style.display='none';
+		$('s1').innerHTML=selectP1(school);
+		console.log(selectP1(school));
+	}
+	$('b').onclick=function(){
+		$('zai').style.display='none';
+		$('fei').style.display='block';
+	}
+	$('s1').onchange=function(e){
+		console.log(e.srcElement.value,this.options);
+		this.remove(this.options[0]);
+		$('s2').innerHTML=selectP2(school,e.srcElement.value);
+	}
+
+
+</script>
+</body>
+</html>
