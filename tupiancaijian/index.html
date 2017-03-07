@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UI组件之图片裁剪器</title>
+	<style>
+		#resize{
+			resize:both;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border:1px solid red;
+			overflow:auto;
+			background-color: rgba(0,0,0,0.5);
+		}
+		#main{
+			position: relative;
+		}
+		input[type='radio']{
+			width: 20px;
+			height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="file" id='input'>
+<div id="main">
+</div>
+<canvas id="app" style="background-color: red;"></canvas>
+<br>
+<label for="a">自由裁剪</label>
+<input type="radio" name='xuze' id='a' checked>
+<label for="b">自定义宽高比</label>
+<input type="radio" name='xuze' id='b'>
+<script src='my.js'></script>
+</body>
+</html>
