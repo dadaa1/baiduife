@@ -1,0 +1,25 @@
+{
+	[{
+		name:'xxxx',
+		music_url:'xxxx',
+		zuozhe:{
+			name:'xx'
+			guanzhu:'xxxx',
+			gequ:'xxxx'
+		},
+		fenlei:'xxxx',
+		geci:'xxxx',
+		img:'xxxx',
+	},{
+		name:'xxxx',
+		music_url:'xxxx',
+		zuozhe:{
+			name:'xx'
+			guanzhu:'xxxx',
+			gequ:'xxxx'
+		},
+		fenlei:'xxxx',
+		geci:'xxxx',
+		img:'xxxx',
+	}]
+}
