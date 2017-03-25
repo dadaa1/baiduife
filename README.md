@@ -25,3 +25,5 @@
 [表单（三）联动](https://dadaa1.github.io/baiduife/liandong)
 
 [数据绑定](https://dadaa1.github.io/baiduife/vue/vue1.js)
+
+[CSS3实现3D 轮播图](https://dadaa1.github.io/baiduife/lunbo)
