@@ -2,6 +2,11 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	perspective:800;
+	transform-style: preserve-3d;
+	-webkit-perspective:800;
+}
 ul{
 	position: relative;
 	width: 400px;
@@ -9,6 +14,7 @@ ul{
 	perspective:800;
 	transform-style: preserve-3d;
 	-webkit-perspective:800;
+	transform: rotateY(90deg)
 }
 li{
 	position: absolute;

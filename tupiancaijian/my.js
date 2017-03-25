@@ -4,7 +4,7 @@ function $(a){
 }
 var canvas=document.createElement('canvas');
 var resize=document.createElement('div');
-resize.innerText='aaa';
+/*resize.innerText='aaa';*/
 resize.id='resize';
 canvas.id='canvas';
 var img=new Image();

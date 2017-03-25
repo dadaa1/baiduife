@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3dpic</title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+</head>
+<style type="text/css">
+	body{
+		margin: 0,auto;
+	}
+	.stage{
+		width: 960px;
+		transform-style: preserve-3d;
+		border: solid 1px red;
+		border-radius: 10px;
+		perspective:1200px;
+		height: 500px;
+		padding-left: 20%;
+		padding-top: 10%;
+	}
+
+</style>
+<body>
+
+<div class ="stage">
+<br><br>
+<img src="img/img_1.jpg" alt=""  rotate=0 width="200" style="position:absolute;transform: rotateY(0deg) translateZ(193.2px) ">    
+<img src="img/img_2.jpg" alt=""  rotate=60 width="200" style="position:absolute;transform: rotateY(60deg) translateZ(193.2px)">   
+<img src="img/img_3.jpg" alt=""  rotate=120 width="200" style="position:absolute;transform: rotateY(120deg) translateZ(193.2px)">  
+<img src="img/img_4.jpg" alt=""  rotate=180 width="200" style="position:absolute;transform: rotateY(180deg) translateZ(193.2px)">  
+<img src="img/img_5.jpg" alt=""  rotate=240 width="200" style="position:absolute;transform: rotateY(240deg) translateZ(193.2px)">  
+<img src="img/img_6.jpg" alt=""  rotate=300 width="200" style="position:absolute;transform: rotateY(300deg) translateZ(193.2px)">
+
+<br>
+<div style="margin: 0 auto;text-align: center;">
+	<button id='left'>left</button>
+	<button id='right'>right</button>
+</div>
+</div>
+
+<script type="text/javascript">
+	var r = 100 / Math.tan(30 / 180 * Math.PI);
+	console.log(r);
+	var currentNode=0;
+
+	$('#left').click(function(){
+		if(parseInt(currentNode)==6)return;
+		currentNode++;
+		console.log(currentNode);
+		var rotate=$('img:nth('+currentNode+')').attr('rotate');
+		var deg=parseInt (rotate)-60;
+	
+		$('img:nth('+currentNode+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		$('img:nth('+currentNode+')').attr('rotate',deg);
+		
+		for(var i=currentNode+1;i<6;i++){
+			var rotate=$('img:nth('+i+')').attr('rotate');
+			deg=parseInt (rotate)-60;
+		
+		$('img:nth('+i+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		$('img:nth('+i+')').attr('rotate',deg);
+		}
+
+		for(var i=currentNode-1;i>-1;i--){
+			var rotate=$('img:nth('+i+')').attr('rotate');
+			deg=parseInt(rotate)-60;
+		
+		$('img:nth('+i+')').attr('rotate',deg);
+		$('img:nth('+i+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		}
+	});
+	$('#right').click(function(){
+		if(parseInt(currentNode)==0)return;
+		currentNode--;
+		console.log(currentNode);
+		var rotate=$('img:nth('+currentNode+')').attr('rotate');
+		var deg=parseInt (rotate)+60;
+	
+		$('img:nth('+currentNode+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		$('img:nth('+currentNode+')').attr('rotate',deg);
+		
+		for(var i=currentNode+1;i<6;i++){
+			var rotate=$('img:nth('+i+')').attr('rotate');
+			deg=parseInt (rotate)+60;
+		
+		$('img:nth('+i+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		$('img:nth('+i+')').attr('rotate',deg);
+		}
+
+		for(var i=currentNode-1;i>-1;i--){
+			var rotate=$('img:nth('+i+')').attr('rotate');
+			deg=parseInt(rotate)+60;
+		
+		$('img:nth('+i+')').attr('rotate',deg);
+		$('img:nth('+i+')').css('transition','2s').css('transform', 'rotateY('+deg+'deg) translateZ(193.2px)');
+		}
+	});
+</script>
+
+</body>
+</html>

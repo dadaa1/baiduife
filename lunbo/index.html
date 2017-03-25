@@ -7,12 +7,55 @@
 </head>
 <body>
 	<ul>
-		<li><img src="img/img_1.jpg" alt=""></li>
-		<li><img src="img/img_2.jpg" alt=""></li>
-		<li><img src="img/img_3.jpg" alt=""></li>
-		<li><img src="img/img_4.jpg" alt=""></li>
-		<li><img src="img/img_5.jpg" alt=""></li>
-		<li><img src="img/img_6.jpg" alt=""></li>
+		<li style='transform:rotateY(0deg) translateZ(300px);'><img src="img/img_1.jpg"></li>
+		<li style='transform:rotateY(60deg) translateZ(300px);'><img src="img/img_2.jpg"></li>
+		<li style='transform:rotateY(120deg) translateZ(300px);'><img src="img/img_3.jpg"></li>
+		<li style='transform:rotateY(180deg) translateZ(300px);'><img src="img/img_4.jpg"></li>
+		<li style='transform:rotateY(240deg) translateZ(300px);'><img src="img/img_5.jpg"></li>
+		<li style='transform:rotateY(300deg) translateZ(300px);'><img src="img/img_6.jpg"></li>
 	</ul>
+	<div id="anniu">
+	<button onclick='runRight()'>前进</button>
+	<button onclick='runLeft()'>后退</button>
+	</div>
+	<script>
+		var li=document.getElementsByTagName('li');
+		var l=Array.prototype.slice.call(li,0);
+		function sliceStyle(str){
+		return str.match('-[0-9]{1,8}|[0-9]{1,8}');
+		}
+		function stringStyle(num){
+			return 'rotateY('+num+'deg) translateZ(300px)';
+		}
+		function runRight(){
+		l.forEach(function(item){
+		var d=sliceStyle(item.style.transform)[0];
+		console.log(d)
+		d=parseInt(d);
+		d+=60;
+		
+		console.log(d)
+		item.style.transform=stringStyle(d);
+		d=null;
+
+		})
+		console.log('_________________')
+		}
+		function runLeft(){
+			l.forEach(function(item){
+		var d=sliceStyle(item.style.transform)[0];
+		console.log(d)
+		d=parseInt(d);
+		
+		d-=60;
+		
+		console.log(d)
+		item.style.transform=stringStyle(d);
+		d=null;
+
+		})
+		console.log('_________________')
+		}
+	</script>
 </body>
 </html>
