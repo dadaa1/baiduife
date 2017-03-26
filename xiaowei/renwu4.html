@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	html body{
+		height: 100%;
+		width: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+		}
+	.main{
+		position: absolute;  
+ 		top: 0;
+ 		left: 0; 
+ 		bottom: 0;
+ 		right: 0;  	
+		width: 400px;
+		height: 200px;
+		background-color: #ccc;
+		margin: auto;
+	}
+	.cricle{
+		display: inline-block;
+		width: 50px;
+		height: 50px;		
+		background-color: #fc0;
+	}
+	.a1{
+		border-radius: 0 0 50px 0;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	.a2{
+		border-radius:50px 0 0 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+</style>
+</head>
+<body>
+<div class="main">
+	<span class="cricle a1"></span>
+	<span class="cricle a2"></span>
+</div>
+</body>
+</html>
