@@ -1,0 +1,207 @@
+/*基本样式初始化*/
+html{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+h1{
+	margin: 0;
+}
+/*定义弹性盒子 start*/
+.box{
+	/*定义盒子为弹性布局*/
+	display: -webkit-box !important;
+	display: box !important;
+	position:relative;
+}
+.b-rev{
+	/*定义元素排列方向*/
+	-webkit-box-direction:reverse;
+	box-direction:reverse;
+}
+.b-ver{
+	/*定义元素垂直排列*/
+	-webkit-box-orient:vertical;
+	box-orient:vertical;
+}
+.b-ac
+	{
+		/*定义元素垂直居中*/
+	-webkit-box-align:center;
+	box-align:center;
+}
+.b-ae
+{
+	/*定义元素底部居中*/
+	-webkit-box-align:end;
+	box-align:end;
+}
+
+.b-pc
+{
+	/*定义元素水平居中*/
+	-webkit-box-pack:center;
+	box-pack:center;
+}
+.b-pe
+{
+	/*定义元素位于末尾*/
+	-webkit-box-pack:end;
+	box-pack:end;
+}
+.b-pj
+{
+	/*两端对齐*/
+	-webkit-box-pack:justify;
+	box-pack:justify;
+}
+.b-f1{
+	position:relative;
+	-webkit-box-flex: 1; 
+	box-flex: 1;
+}
+.b-f2{
+	position:relative;
+	-webkit-box-flex: 2; 
+	box-flex: 2;
+}
+/*定义弹性盒子结束*/
+header{
+	height: 4rem;
+	background-color: rgb(145,212,218);
+}
+.c-w{
+	color: #fff;
+}
+.xuanxingka{
+	height: 4rem;
+}
+ul{
+	margin: 0;
+	margin-top: 1rem;
+	padding: 0;
+}
+li{
+	margin: 0;
+	padding-bottom: 0.5rem;
+	list-style: none;
+	font-size: 1.5rem;
+}
+.xia{
+	border-bottom: .3rem rgb(145,212,218) solid;
+}
+.ban{
+	background-image: url('xiong.png');
+	height: 12rem;
+	background-repeat:repeat-y;
+	background-size:100% 100%;
+	background-position:center;
+}
+.cricle{
+	background-color: rgb(145,212,218);
+	display: inline-block;
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius:1.8rem;
+}
+.cricle>i{
+	font-size: 36px;
+}
+.biaoqian{
+	margin: 1rem;
+	padding-bottom: 2rem;
+	border-bottom: .15rem gray solid;
+}
+.fo-w{
+	font-size: 1.2rem;
+	margin-top: .5rem;
+}
+.xiaoxiong{
+	background-image: url('xiaoxiong.png');
+	height: 6rem;
+	width: 6rem;
+	background-repeat:repeat-y;
+	background-size:100% 100%;
+	background-position:center;
+}
+h2,h4{
+	margin: 0;
+}
+.two{
+	border-left:.15rem gray solid; 
+}
+.fenlan{
+	padding-bottom: 2rem;
+}
+.b-gray{
+	height: 1.5rem;
+	width: 100%;
+	background-color: rgba(150,145,145,0.5);
+}
+.mokuai{
+	margin: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: .15rem gray solid;
+}
+.list{
+	background-image: url('list.png');
+	width: 6rem;
+	height: 6rem;
+	background-repeat:repeat-y;
+	background-size:100% 100%;
+	background-position:center;
+}
+.wenan{
+	margin-left: 1rem;
+}
+.b-g{
+	background-color: rgba(150,145,145,0.5);
+}
+.wenan-m{
+	min-width: 6rem;
+	margin: .5rem;
+	padding: .5rem;
+	border-radius: .5rem;
+	text-align: center;
+}
+.list1{
+	background-image: url('list-1.png') !important;
+	
+}
+h3{
+	text-overflow: hidden;
+	word-wrap：break-word;
+}
+h3,p{
+	margin: 0;
+}
+.w-m{
+	margin: 1rem;
+}
+.t-m{
+	margin-top: .5rem;
+}
+p{
+	margin-top: 1.3rem;
+}
+ .w-m-l{
+ 	margin-left: 1rem;
+ }
+ .xian{
+ 	border-bottom:.1rem gray solid; 
+ 	margin-bottom: 1rem;
+ }
+ .last{
+ 	margin-left: 1rem;
+ 	margin-right:1rem;
+ }
+ .last>div{
+ 	width: 33%;
+ }
