@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>无限滚动</title>
+	<style>
+		li{
+			height: 30px;
+			line-height: 30px;
+			list-style-type: none;
+			text-align: center;
+			border-bottom: 1px solid red;
+		}
+		div{
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+		<li>1</li>
+	</ul>
+	<div style='display: none;' id='jia'>加载中·······</div>
+	<script>
+var ul=document.getElementsByTagName('ul')[0];
+var triggerDistance = 10;
+function fetchData() {
+  var distance = document.body.getBoundingClientRect().bottom - window.innerHeight;
+  if (distance < triggerDistance ) {
+  	appendHtml();
+  }
+
+}
+var i=0;
+var div=document.getElementById('jia');
+function appendHtml(){
+	div.style.display='block';
+	setTimeout(function(){
+		div.style.display='none';
+		var li=document.createElement('li');
+		li.innerText='我是新添加的~'+i++;
+		ul.appendChild(li);
+	},1000)
+}
+window.addEventListener('scroll', fetchData);
+	</script>
+</body>
+</html>
