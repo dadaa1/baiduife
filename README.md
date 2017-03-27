@@ -27,3 +27,5 @@
 [数据绑定](https://dadaa1.github.io/baiduife/vue/vue1.js)
 
 [CSS3实现3D 轮播图](https://dadaa1.github.io/baiduife/lunbo)
+
+[无限滚动效果](https://dadaa1.github.io/baiduife/wuxiangundong)
