@@ -29,3 +29,5 @@
 [CSS3实现3D 轮播图](https://dadaa1.github.io/baiduife/lunbo)
 
 [无限滚动效果](https://dadaa1.github.io/baiduife/wuxiangundong)
+
+[UI组件之图片裁剪器](https://dadaa1.github.io/baiduife/tupiancaijian)
