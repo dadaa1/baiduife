@@ -31,3 +31,5 @@
 [无限滚动效果](https://dadaa1.github.io/baiduife/wuxiangundong)
 
 [UI组件之图片裁剪器](https://dadaa1.github.io/baiduife/tupiancaijian)
+
+[UI组件之色彩选择器](https://dadaa1.github.io/baiduife/secaixuanziqi)
