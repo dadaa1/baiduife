@@ -35,11 +35,72 @@
 			top:175px;
 			left: 2.5px;
 		}
+		#ce{
+			border:1px solid;
+			display: inline-block;
+			width: 150px;
+			height: 400px;
+			background-color: red;
+			overflow:hidden;
+			margin-left: 20px;
+		}
+		#ce>span{
+			display: inline-block;
+			position: relative;
+			width: 150px;
+			height: 66.67px;
+		}
+		#ce h2{
+			display: inline-block;
+		}
+		#ce span>input{
+			position: absolute;
+			font-size: 24px;
+			top: 0;
+			left: 20px;
+			bottom: 0;
+			right: 0;
+		} 
 	</style>
 </head>
 <body>
 	<div id="app"><canvas id='one'></canvas><span class="cricle" id='one_c'></span></div>
 	<div id="hua"><canvas id="two"></canvas><span class="cricle" id='two_c'></span></div>
+	
+
+	<div id="ce">
+		<span>
+			<h2>R</h2>
+			<input type="text" id='r' value='0'>
+			<i></i><i></i>
+		</span>
+		<span>
+			<h2>G</h2>
+			<input type="text" id='g' value='0'>
+			<i></i><i></i>
+		</span>
+		<span>
+			<h2>B </h2>
+			<input type="text" id='b' value='0'>
+			<i></i><i></i>
+		</span>
+		<span>
+			<h2>H</h2>
+			<input type="text" id='h' value='0'>
+			<i></i><i></i>
+		</span>
+		<span>
+			<h2>S</h2>
+			<input type="text" id='s' value='0'>
+			<i></i><i></i>
+		</span>
+		<span>
+			<h2>L</h2>
+			<input type="text" id='l' value='0'>
+			<i></i><i></i>
+		</span>
+	</div>
+
 	<script src='my.js'></script>
 </body>
 </html>
