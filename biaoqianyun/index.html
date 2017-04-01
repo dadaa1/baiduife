@@ -7,7 +7,6 @@
 		ul{
 			width: 500px;
 			height: 500px;
-			border: solid red 1px;
 			margin: auto;
 			position: relative;
 		}
@@ -15,8 +14,11 @@
 			transition: all 0.5s;
 			list-style-type: none;
 			position: absolute;
-			left:175px;
-			top: 175px;
+			left:250px;
+			top: 250px;
+		}
+		li:hover{
+			border: 1px solid blue;
 		}
 	</style>
 </head>
@@ -24,7 +26,11 @@
 	<ul id="app">
 		
 	</ul>
-	<button id='btn'>werfdfv</button>
+	内容：<input type="text" value='内容' id='nei'>
+	字体大小：<input type="text" value='48px' id='daxiao'>
+	颜色：<input type="text" value='green' id='yanse'>
+	<button id="sub">哒哒哒</button>
 	<script src="my.js"></script>
+	
 </body>
 </html>
