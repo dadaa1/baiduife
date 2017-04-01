@@ -33,3 +33,5 @@
 [UI组件之图片裁剪器](https://dadaa1.github.io/baiduife/tupiancaijian)
 
 [UI组件之色彩选择器](https://dadaa1.github.io/baiduife/secaixuanziqi)
+
+[标签云](https://dadaa1.github.io/baiduife/biaoqianyun)
