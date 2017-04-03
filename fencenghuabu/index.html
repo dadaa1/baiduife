@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分层画布</title>
+	<style>
+		main{
+			display: inline-block;
+			width: 500px;
+			height: 500px;
+			border:1px solid red;
+			position: relative;
+		}
+		#con canvas{
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+		#lan{
+			float: right;
+			overflow: auto;
+			margin-right: 20%;
+			height: 600px;
+			overflow: auto;
+		}
+		
+		
+	</style>
+</head>
+<body>
+<main id='con'>
+	<canvas width="500" height="500" id='one' index='a'></canvas>
+</main>
+<div id='lan'></div>
+<p>点击右侧小图可以改变颜色</p>
+<p>点击右侧数字按钮可以改变层级</p>
+	<script src='my.js'></script>
+</body>
+</html>

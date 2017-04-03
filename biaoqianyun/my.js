@@ -55,7 +55,7 @@ var len=list.length;
 function sudu(){
 timer=setInterval(function(){
 	xuanzhuan('x',1)
-},200)
+},400)
 }
 function addLi(dom,x,y,z,value){
 	var li=document.createElement('li');
