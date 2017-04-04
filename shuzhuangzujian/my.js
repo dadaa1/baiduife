@@ -43,7 +43,7 @@ function createNode(node){
     }
    return ul;
 }
-document.body.appendChild(createNode(nodes))
+document.body.appendChild(createNode(nodes));
 console.log(createNode(nodes));
 document.getElementsByTagName('ul')[0].onclick=function(e){
     console.log(e.target);
