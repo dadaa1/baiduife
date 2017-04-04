@@ -1,7 +1,13 @@
 var nodes = [{
     name: "父节点1",
     children: [{
-        name: "子节点1"
+        name: "子节点1",
+        children: [{
+        name: "子节点6"
+    },
+    {
+        name: "子节点7"
+    }]
     },
     {
         name: "子节点2"
