@@ -44,3 +44,6 @@
 
 [虚拟画笔](https://dadaa1.github.io/baiduife/xunihuabi)
 
+[任务一：零基础JavaScript编码（一）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu1.html)
+
+[任务二：零基础JavaScript编码（二）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu2.html)
