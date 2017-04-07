@@ -33,6 +33,10 @@
 			return document.getElementById(a);
 		}
 		function addEle(num){
+			if(num==''){
+				alert('请输入值~');
+				return;
+			}
 			var html=document.createElement('span');
 			html.innerText=num;
 			return html;
@@ -52,9 +56,11 @@
 			$('num').value='';
 		}
 		$('a3').onclick=function(){//左侧出
+			alert($('app').children[0].innerText)
 			$('app').removeChild($('app').children[0])
 		}
 		$('a4').onclick=function(){//右侧出
+			alert($('app').children[$('app').children.length-1].innerText)
 			$('app').removeChild($('app').children[$('app').children.length-1])
 		}
 	</script>
