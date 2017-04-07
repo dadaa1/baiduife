@@ -40,6 +40,10 @@
 
 [实现树形组件](https://dadaa1.github.io/baiduife/shuzhuangzujian)
 
+<<<<<<< HEAD
 [ECharts NO.1 - 零基础绘制ECharts图表](https://dadaa1.github.io/baiduife/echarts/jschu.html)
 
 [虚拟画笔](https://dadaa1.github.io/baiduife/xunihuabi)
+=======
+[ECharts NO.1 - 零基础绘制ECharts图表](https://dadaa1.github.io/baiduife/echarts/jichu.html)
+>>>>>>> origin/master
