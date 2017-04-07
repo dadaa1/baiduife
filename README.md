@@ -47,3 +47,5 @@
 [任务一：零基础JavaScript编码（一）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu1.html)
 
 [任务二：零基础JavaScript编码（二）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu2.html)
+
+[任务三：零基础JavaScript编码（三）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu3.html)
