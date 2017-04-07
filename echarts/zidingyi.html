@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ECharts NO.2 - 实现自定义的统计图表</title>
+	<script src="echarts.min.js"></script>
+</head>
+<body>
+	<div id="main" style="width: 800px;height:600px;"></div>
+<script>
+	var myChart = echarts.init(document.getElementById('main'));
+
+	var option = {
+            title: {
+                text: 'What\'s my credit score?',
+                padding:[5],
+                textAlign:'left',
+                subtext:'Puerto Rico,decrease on a year earlier',
+                subtextStyle:{
+                	color:'#000',
+                	fontSize:16
+                }
+            },
+            tooltip: {},
+            legend: {
+                data:['销量1','销量2']
+            },
+            color:['blue','block','blue','block','blue','block','blue','block','blue','block',],
+            xAxis: {
+            	nameLocation:'middle',
+            	inverse:true,
+            	silent: false,
+        		axisLine: {onZero: true},
+        		splitLine: {show: false},
+        		splitArea: {show: false},
+                data: ['11','10','09','08','07','2006']
+            },
+            yAxis: {
+            	nameLocation:'start',
+            	inverse: true,
+            	position:'right'
+       			//splitArea: {show: false}
+            },
+            series: [{
+                name: '销量1',
+                type: 'bar',
+                data: [2,4,1,2,4,3]
+            },{
+            	name: '销量2',
+                type: 'bar',
+                data: [1,4,2,3,4,2]
+            }]
+            
+        };
+        myChart.setOption(option);
+
+
+
+
+
+</script>
+</body>
+</html>

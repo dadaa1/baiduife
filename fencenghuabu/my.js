@@ -12,8 +12,6 @@ img.onload=function(){
 }
 
 var bound=document.getElementById('con').getBoundingClientRect();
-var top=bound.top;
-var left=bound.left;
 
 var x=0,y=0;
 document.getElementById('con').onmousedown=function(e){

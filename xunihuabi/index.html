@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>虚拟画笔~</title>
+	<style type="text/css">
+		canvas{
+			border: 1px solid red;
+		}
+		div{
+			margin: 20px 0 20px 0;
+		}
+		#xiangpi+label+div{
+			display: none;
+		}
+		#xiangpi:checked+label+div{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<input type="radio" name='xx' id='huabi' checked><label for='shuazi'>画笔</label>
+	<input type="radio" name='xx' id='shuazi'><label for='shuazi'>刷子</label>
+	<input type="radio" name='xx' id='penqiang'><label for='penqiang'>喷枪</label>
+	<input type="radio" id='xiangpi' name='xx'><label for='xiangpi'>橡皮</label>
+	<div id='xiangpi1'>
+		矩形<input type="radio" id='juxing' name='xp' checked >
+		<span>
+		</span>
+		圆形<input type="radio" id='yuan' name='xp'>
+		<span>
+			半径/宽:<input value='10' type="text" id='banjing'>
+		</span>
+		<input type="button" value='确定' id='queding'>
+	</div>
+
+</div>
+	<canvas id="app" width="600" height="500"></canvas>
+	<button id='clear'>清除画布</button>
+	<script src="my.js"></script>
+</body>
+</html>
