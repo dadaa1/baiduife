@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务五：基础JavaScript练习（二）</title>
+	<style type="text/css">
+		span{
+			color:#fff;
+			display: inline-block;
+			line-height: 30px;
+			text-align: center;
+			margin: 2px;
+			width: 10px;
+			height:10px;
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+<p>请输入的数字在10-100之间</p>
+	<div>
+		<input type="text" id='num'>
+		<input type="button" value="左侧入" id='a1'>
+		<input type="button" value="右侧入" id='a2'>
+		<input type="button" value="左侧出" id='a3'>
+		<input type="button" value="右侧出" id='a4'>
+		<input type="button" value="排序" id='a5'>
+	</div>
+	<div id="app">
+		
+	</div>
+	<div id="aqq">
+		
+	</div>
+	<script type="text/javascript">
+	var list=[];
+		function $(a){
+			return document.getElementById(a);
+		}
+		function addEle(num){
+			if(+num>=10&&+num<=100){
+				list.push(num);
+				var html=document.createElement('span');
+				html.style.height=num+'px';
+				return html;
+			}else{
+				alert('请输入正确的数字~');
+			}
+			
+		}
+		$('a1').onclick=function(){//左侧入
+			if($('app').children.length-1>60){
+				alert('超过60个了~')
+				return;
+			}
+			var a=addEle($('num').value);
+			if($('app').children.length==0){
+				$('app').appendChild(a);
+			}else{
+				$('app').insertBefore(a,$('app').children[0]);
+			}
+			$('num').value='';
+		}
+		$('a2').onclick=function(){//右侧入
+			if($('app').children.length-1>60){
+				alert('超过60个了~')
+				return;
+			}
+			var a=addEle($('num').value);
+			$('app').appendChild(a);
+			$('num').value='';
+		}
+		$('a3').onclick=function(){//左侧出
+			$('app').removeChild($('app').children[0])
+		}
+		$('a4').onclick=function(){//右侧出
+			$('app').removeChild($('app').children[$('app').children.length-1])
+		}
+		$('a5').onclick=function(){
+			for(var i=0;i<list.length;i++){
+				for(var j=0;j<list.length-i;j++){
+					if(list[j]<list[j+1]){
+						var t=list[j];
+						list[j]=list[j+1];
+						list[j+1]=t;
+					}
+				}
+			}
+			for(var n=0;n<list.length;n++){
+				var html=document.createElement('span');
+				html.style.height=list[n]+'px';
+				$('aqq').appendChild(html);
+			}
+		}
+	</script>
+</body>
+</html>
