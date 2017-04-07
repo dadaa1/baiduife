@@ -41,3 +41,5 @@
 [实现树形组件](https://dadaa1.github.io/baiduife/shuzhuangzujian)
 
 [ECharts NO.1 - 零基础绘制ECharts图表](https://dadaa1.github.io/baiduife/echarts/jschu.html)
+
+[虚拟画笔](https://dadaa1.github.io/baiduife/xunihuabi)
