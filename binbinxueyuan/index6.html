@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务六：基础JavaScript练习（三）</title>
+	<style type="text/css">
+		#app>span{
+			color:#fff;
+			display: inline-block;
+			line-height: 30px;
+			text-align: center;
+			margin: 10px;
+			width: auto;
+			height:30px;
+			background-color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<textarea id='num'></textarea>
+		<input type="button" value="左侧入" id='a1'>
+		<input type="button" value="右侧入" id='a2'>
+		<input type="button" value="左侧出" id='a3'>
+		<input type="button" value="右侧出" id='a4'>
+		<input type="text" id='a5'>
+		<input type="button" value="查询" id='a6'>
+	</div>
+	<div id="app">
+		
+	</div>
+	<script type="text/javascript">
+		function $(a){
+			return document.getElementById(a);
+		}
+		function addEle(num){
+			if(num==''){
+				alert('请输入值~');
+				return;
+			}
+			var html=document.createElement('span');
+			html.innerText=num;
+			return html;
+		}
+		$('a1').onclick=function(){//左侧入
+			var myform=/[,!\s\r、]{1}/g;/*正表达式*/
+			var arr=$('num').value.split(myform);
+			console.log(arr)
+			if(arr.toString()==""){
+				alert('请输入值')
+				return;
+			}
+			for(var i=0;i<arr.length;i++){
+				var a=addEle(arr[i]);
+				console.log(a)
+				if($('app').children.length==0){
+					$('app').appendChild(a);
+				}else{
+					$('app').insertBefore(a,$('app').children[0]);
+				}
+			}
+			
+			$('num').value='';
+		}
+		$('a2').onclick=function(){//右侧入
+			var myform=/[，,！!\s\r、]{1}/g;/*正表达式*/
+			var arr=$('num').value.split(myform);
+			console.log(arr)
+			if(arr.toString()==""){
+				alert('请输入值')
+				return;
+			}
+			for(var i=0;i<arr.length;i++){
+				var a=addEle(arr[i]);
+				$('app').appendChild(a);
+			}
+			$('num').value='';
+		}
+		$('a3').onclick=function(){//左侧出
+			alert($('app').children[0].innerText)
+			$('app').removeChild($('app').children[0])
+		}
+		$('a4').onclick=function(){//右侧出
+			alert($('app').children[$('app').children.length-1].innerText)
+			$('app').removeChild($('app').children[$('app').children.length-1])
+		}
+		$('a6').onclick=function(){
+			var l=$('a5').value;
+			var patt=new RegExp(l,'g');
+			console.log(patt);
+			for(var i=0;i<$('app').children.length;i++){
+				var a=patt.test($('app').children[i].innerText);
+				console.log(a)
+				if(a){
+					$('app').children[i].style.backgroundColor='green';
+				}else{
+					$('app').children[i].style.backgroundColor='red';
+				}
+			}
+		}
+	</script>
+</body>
+</html>
