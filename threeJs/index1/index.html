@@ -47,14 +47,14 @@
                 //wireframe: true
             })
     );
-    yuan1.position.set(-15,-7,7)
+    yuan1.position.set(-15,-7.5,7,5)
     scene.add(yuan1)
     var yuan2 = new THREE.Mesh(new THREE.TorusGeometry(3, 1, 12, 18),
             new THREE.MeshBasicMaterial({
                 color: 0xff0000,
             })
     );
-    yuan2.position.set(15,-7,7)
+    yuan2.position.set(15,-7.5,7.5)
     scene.add(yuan2)
     // render
     renderer.render(scene, camera);
