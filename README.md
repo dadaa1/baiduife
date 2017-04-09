@@ -58,4 +58,4 @@
 
 [WebGL No.1 - Three.js 入门](https://dadaa1.github.io/baiduife/threeJs/index1)
 
-[WebGL No. 2 - 光与影](https://dadaa1.github.io/baiduife/threeJs/index1)
+[WebGL No. 2 - 光与影](https://dadaa1.github.io/baiduife/threeJs/index2)
