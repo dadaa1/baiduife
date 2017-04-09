@@ -57,3 +57,5 @@
 [任务六：基础JavaScript练习（三）](https://dadaa1.github.io/baiduife/binbinxueyuan/renwu6.html)
 
 [WebGL No.1 - Three.js 入门](https://dadaa1.github.io/baiduife/threeJs/index1)
+
+[WebGL No. 2 - 光与影](https://dadaa1.github.io/baiduife/threeJs/index1)
